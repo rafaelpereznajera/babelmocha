@@ -10,4 +10,15 @@ describe('Car', function() {
       assert.equal(car.toString(),'(golf,red)');
     });
   });
+  describe('#acelerate', function () {
+    it('should change speed', function () {
+      const car = new Car('golf','red')
+      car.acelerate(10)
+      assert.equal(car.speed,10)
+      car.brake(5)
+      assert.equal(car.speed,5)
+      car.stop()
+      assert.equal(car.speed,0)
+    });
+  });
 });
