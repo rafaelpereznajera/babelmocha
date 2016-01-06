@@ -10,7 +10,7 @@ class Box {
     return '(' + this.name + ',' + this.owner + ')';
   }
   addGuest(guest){
-    this.guests.push(guest);
+    this.guests[guest.identifier] = guest;
   }
   removeGuest(guest){
     let index = this.guests.indexOf(guest);
